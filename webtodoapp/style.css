@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgba(105, 127, 226, 0.28);
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(105, 127, 226, 0.15);
+    clip-path: circle(35% at right 85%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(105, 127, 226, 0.2);
+    clip-path: circle(27% at 5% 4%);
+    
+}
+
+.main{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.list{
+    margin: 70px auto;
+    height: 50%;
+    width: 53%;
+    padding: 25px 30px 70px;
+    background-color: rgba(255, 255, 255,0.52);
+    border-radius: 10px;
+}
+.list img{
+    height: 70px;
+}
+.list h2{
+    color: rgba(52, 52, 53, 0.89);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.69);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+    font-weight: 14px;
+    font-size: 1.05em;
+}
+
+button{
+    background: rgba(52, 52, 53, 0.89);
+    color: rgba(255, 255, 255, 0.75);
+    outline: none;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul .marked{
+    text-decoration: line-through;
+}
+ul .marked::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 45%;
+    background-image: url(check.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    font-weight: lighter;
+}
+ul div{
+    display: flex;
+}
+div li{
+    width: 95%;
+}
+div span{
+    width: 5%;
+    padding: 13px 6px  0px 10px;
+
+}
+ul span:hover{
+    background:rgba(128, 128, 128, 0.274);
+    border-radius: 50%;
+}
